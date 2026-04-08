@@ -2,7 +2,7 @@
 
 PlantDoc is a multimodal plant disease detection system that combines computer vision and NLP models to diagnose crop diseases from leaf images and symptom descriptions. It supports image-only, text-only, and fused predictions with calibrated confidence for reliable agricultural decision support.
 
-![PlantDoc Banner](https://images.unsplash.com/photo-1523348837708-15d4a09cfac2?auto=format&fit=crop&q=80&w=1200)
+![PlantDoc Banner](./assets/homepage.png)
 
 ## 🚀 Features
 
@@ -57,8 +57,12 @@ PlantDoc is a multimodal plant disease detection system that combines computer v
 
 ## 📸 Screenshots
 
-*Main Dashboard*
-![Dashboard Screenshot](https://images.unsplash.com/photo-1585320806297-9794b3e4eeae?auto=format&fit=crop&q=80&w=1000)
+### Main Dashboard
+![Dashboard Screenshot](./assets/homepage.png)
+
+### Analysis Tools
+![Analysis Screenshot](./assets/analysis.png)
+
 
 ## 📄 License
 
