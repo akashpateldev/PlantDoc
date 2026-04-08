@@ -1,0 +1,171 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@600;700&display=swap');
+
+@layer base {
+  :root {
+    /* Plant Doc - Nature-inspired Professional Palette */
+    --background: 120 20% 98%;
+    --foreground: 140 25% 15%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 140 25% 15%;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 140 25% 15%;
+
+    /* Primary: Forest Green */
+    --primary: 142 45% 32%;
+    --primary-foreground: 0 0% 100%;
+
+    /* Secondary: Sage Green */
+    --secondary: 140 20% 94%;
+    --secondary-foreground: 142 45% 25%;
+
+    /* Muted: Light sage */
+    --muted: 140 15% 92%;
+    --muted-foreground: 140 15% 45%;
+
+    /* Accent: Leaf Green */
+    --accent: 150 50% 45%;
+    --accent-foreground: 0 0% 100%;
+
+    /* Success: Healthy plant green */
+    --success: 142 70% 40%;
+    --success-foreground: 0 0% 100%;
+
+    /* Warning: Diseased yellow */
+    --warning: 45 90% 50%;
+    --warning-foreground: 45 90% 15%;
+
+    --destructive: 0 72% 51%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 88%;
+    --input: 140 15% 88%;
+    --ring: 142 45% 32%;
+
+    --radius: 0.75rem;
+
+    /* Custom gradients */
+    --gradient-hero: linear-gradient(135deg, hsl(142 45% 32%) 0%, hsl(150 50% 45%) 100%);
+    --gradient-card: linear-gradient(180deg, hsl(0 0% 100%) 0%, hsl(140 20% 98%) 100%);
+    --gradient-leaf: linear-gradient(135deg, hsl(140 60% 50%) 0%, hsl(142 45% 32%) 100%);
+
+    /* Shadows */
+    --shadow-sm: 0 1px 2px 0 hsl(140 25% 15% / 0.05);
+    --shadow-md: 0 4px 6px -1px hsl(140 25% 15% / 0.1), 0 2px 4px -2px hsl(140 25% 15% / 0.1);
+    --shadow-lg: 0 10px 15px -3px hsl(140 25% 15% / 0.1), 0 4px 6px -4px hsl(140 25% 15% / 0.1);
+    --shadow-xl: 0 20px 25px -5px hsl(140 25% 15% / 0.1), 0 8px 10px -6px hsl(140 25% 15% / 0.1);
+
+    --sidebar-background: 0 0% 98%;
+    --sidebar-foreground: 240 5.3% 26.1%;
+    --sidebar-primary: 240 5.9% 10%;
+    --sidebar-primary-foreground: 0 0% 98%;
+    --sidebar-accent: 240 4.8% 95.9%;
+    --sidebar-accent-foreground: 240 5.9% 10%;
+    --sidebar-border: 220 13% 91%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+
+  .dark {
+    --background: 140 20% 8%;
+    --foreground: 140 15% 95%;
+
+    --card: 140 20% 12%;
+    --card-foreground: 140 15% 95%;
+
+    --popover: 140 20% 12%;
+    --popover-foreground: 140 15% 95%;
+
+    --primary: 142 50% 45%;
+    --primary-foreground: 140 25% 10%;
+
+    --secondary: 140 20% 18%;
+    --secondary-foreground: 142 40% 70%;
+
+    --muted: 140 15% 20%;
+    --muted-foreground: 140 10% 60%;
+
+    --accent: 150 45% 50%;
+    --accent-foreground: 140 25% 10%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 100%;
+
+    --border: 140 15% 22%;
+    --input: 140 15% 22%;
+    --ring: 142 50% 45%;
+
+    --sidebar-background: 240 5.9% 10%;
+    --sidebar-foreground: 240 4.8% 95.9%;
+    --sidebar-primary: 224.3 76.3% 48%;
+    --sidebar-primary-foreground: 0 0% 100%;
+    --sidebar-accent: 240 3.7% 15.9%;
+    --sidebar-accent-foreground: 240 4.8% 95.9%;
+    --sidebar-border: 240 3.7% 15.9%;
+    --sidebar-ring: 217.2 91.2% 59.8%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans antialiased;
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  h1, h2, h3 {
+    font-family: 'Playfair Display', serif;
+  }
+}
+
+@layer components {
+  .gradient-hero {
+    background: var(--gradient-hero);
+  }
+
+  .gradient-card {
+    background: var(--gradient-card);
+  }
+
+  .gradient-leaf {
+    background: var(--gradient-leaf);
+  }
+
+  .shadow-card {
+    box-shadow: var(--shadow-md);
+  }
+
+  .shadow-card-hover {
+    box-shadow: var(--shadow-lg);
+  }
+
+  .animate-float {
+    animation: float 6s ease-in-out infinite;
+  }
+
+  .animate-pulse-slow {
+    animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+  }
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+}
