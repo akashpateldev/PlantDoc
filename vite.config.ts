@@ -16,4 +16,15 @@ export default defineConfig(({ mode }) => ({
     },
     dedupe: ["react", "react-dom", "react/jsx-runtime"],
   },
+  build: {
+    chunkSizeWarningLimit: 1600,
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          "vendor": ["react", "react-dom", "react-router-dom", "@supabase/supabase-js"],
+          "ui": ["lucide-react", "clsx", "tailwind-merge"]
+        }
+      }
+    }
+  }
 }));
