@@ -8,11 +8,7 @@ const SUPABASE_PUBLISHABLE_KEY = import.meta.env.VITE_SUPABASE_PUBLISHABLE_KEY;
 // Import the supabase client like this:
 // import { supabase } from "@/integrations/supabase/client";
 
-// Provide fallback values so the app doesn't crash on Vercel boot if vars are missing
-const supabaseUrl = SUPABASE_URL || 'https://placeholder.supabase.co';
-const supabaseKey = SUPABASE_PUBLISHABLE_KEY || 'placeholder-key';
-
-export const supabase = createClient<Database>(supabaseUrl, supabaseKey, {
+export const supabase = createClient<Database>(SUPABASE_URL, SUPABASE_PUBLISHABLE_KEY, {
   auth: {
     storage: localStorage,
     persistSession: true,
